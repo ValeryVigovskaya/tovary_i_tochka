@@ -1,5 +1,5 @@
 .button_img_like {
-    background: no-repeat center/20px url("../../../../images/like.svg");
+    background: no-repeat center/20px url("../../../images/like.svg");
     height: 20px;
 }
 
@@ -8,7 +8,7 @@
     width: 20px;
     height: 16px;
     background: rgba(203, 17, 171, 1);
-    -webkit-mask-image:  url('../../../../images/like.svg');
-    mask-image: url("../../../../images/like.svg");
+    -webkit-mask-image:  url('../../../images/like.svg');
+    mask-image: url("../../../images/like.svg");
 
 }

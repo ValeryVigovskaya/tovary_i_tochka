@@ -76,7 +76,6 @@
 @import url("../blocks/text/_color/_green/text_color_green.css");
 @import url("../blocks/text/_color/_green-first/text_color_green-first.css");
 
-@import url("../blocks/border/border.css");
 @import url("../blocks/description/description.css");
 @import url("../blocks/description/__write-off/description__write-off.css");
 @import url("../blocks/description/_frame/description_frame.css");
@@ -107,7 +106,6 @@
 @import url("../blocks/button/_img/button_img_edit.css");
 @import url("../blocks/button/_img/button_img_info.css");
 @import url("../blocks/amount/__adress/amount__adress.css");
-@import url("../blocks/amount/__adress/_hide/amount__adress_hide.css");
 @import url("../blocks/payment-systems/payment-systems.css");
 @import url("../blocks/amount/__write-off/amount__write-off.css");
 @import url("../blocks/button/_size/button_size_long.css");
