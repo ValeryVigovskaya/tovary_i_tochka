@@ -1,0 +1,8 @@
+@media screen and (max-width: 687px) {
+    .navigation-mobile__button {
+        width: 28px;
+        height: 28px;
+        border: none;
+        background: transparent;
+    }
+  }

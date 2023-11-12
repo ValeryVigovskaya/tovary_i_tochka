@@ -1,0 +1,25 @@
+.element__item {
+  color: var(--text-black, #000);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px; /* 123.077% */
+  margin: 0;
+  padding-top: 8px;
+  justify-self: flex-end;
+}
+
+.element__item:first-of-type {
+  padding-top: 0;
+}
+
+@media screen and (max-width: 687px) {
+  .element__item:nth-child(2) {
+    width: 192px;
+    /* align-self: center;  */
+  }
+
+  .element__item:first-of-type {
+    padding-top: 8px;
+  }
+}

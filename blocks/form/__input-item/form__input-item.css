@@ -1,0 +1,12 @@
+.form__input-item {
+    max-width: 338px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 687px) {
+    .form__input-item {
+      max-width: 289px;
+      /* padding-bottom: 16px; */
+    }
+  }

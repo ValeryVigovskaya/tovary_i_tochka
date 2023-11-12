@@ -1,0 +1,13 @@
+.form__input_info {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 687px) {
+    .form__input_info {
+      max-width: 100%;
+      grid-template-columns: 100%;
+      height: 229px;
+      grid-template-rows: repeat(3, auto);
+      gap: 16px;
+    }
+  }

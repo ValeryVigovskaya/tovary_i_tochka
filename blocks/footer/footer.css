@@ -1,0 +1,17 @@
+.footer {
+  max-width: 100%;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 687px) {
+  .footer {
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: 64px 56px;
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+}

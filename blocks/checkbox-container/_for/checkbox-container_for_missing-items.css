@@ -1,0 +1,14 @@
+.checkbox-container_for_missing-items {
+    padding-top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* @media screen and (max-width: 320px) {
+    .checkbox-container_for_basket {
+        padding-top: 17px;
+        
+    }
+  } */

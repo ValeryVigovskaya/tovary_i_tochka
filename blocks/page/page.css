@@ -1,0 +1,36 @@
+.page {
+  max-width: 100%;
+  width: 1400px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+@media screen and (max-width: 1350px) {
+  .page {
+    width: 1024px;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .page {
+    width: 687px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .page {
+    width: 620px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .page {
+    width: 320px;
+  }
+}

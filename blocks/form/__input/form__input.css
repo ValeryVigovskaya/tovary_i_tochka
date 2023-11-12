@@ -1,0 +1,17 @@
+.form__input {
+  max-width: 700px;
+  border: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0;
+  height: 64px;
+  gap: 24px;
+}
+
+@media screen and (max-width: 687px) {
+  .form__input {
+    max-width: 100%;
+    grid-template-columns: 100%;
+    /* height: 64px; */
+  }
+}

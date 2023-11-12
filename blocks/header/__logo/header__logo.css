@@ -1,0 +1,19 @@
+.header__logo {
+  font-variant: all-small-caps;
+  letter-spacing: 1.2px;
+  position: absolute;
+  width: 106px;
+  top: 16px;
+  left: 64.5px;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 687px) {
+  .header__logo {
+    line-height: 24px; /* 92.308% */
+    font-variant: all-small-caps;
+    width: 198px;
+    top: 13px;
+    left: 50px;
+  }
+}

@@ -1,0 +1,18 @@
+.element__price {
+  margin: 0;
+  color: var(--text-black, #000);
+  text-align: right;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px; /* 140% */
+  letter-spacing: -1px;
+}
+
+@media screen and (max-width: 687px) {
+  .element__price {
+    grid-template-columns: repeat(2, auto);
+    position: relative;
+    font-size: 16px;
+  }
+}

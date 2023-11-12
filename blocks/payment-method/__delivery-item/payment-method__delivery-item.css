@@ -1,0 +1,6 @@
+.payment-method__delivery-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+}

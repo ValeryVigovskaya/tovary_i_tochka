@@ -1,0 +1,12 @@
+.navigation-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 687px) {
+  .navigation-mobile {
+    display: block;
+    background: var(--background-white, #fff);  
+    box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2.5px);
+  }
+}

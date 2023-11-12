@@ -1,0 +1,9 @@
+.popup__container_pay {
+    width: 400px;
+}
+
+@media screen and (max-width: 557px) {
+    .popup__container_pay {
+      width: 293px;
+    }
+  }

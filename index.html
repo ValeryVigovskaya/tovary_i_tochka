@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товары и точка</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="project">
+    <div class="page">
+      <header class="header">
+        <h1
+          class="header__logo text text_size_extra-large text_weight_semibold text_color_white"
+        >
+          Товары и точка
+        </h1>
+        <nav>
+          <ul class="header__list">
+            <li class="header__list-item">
+              <button type="button" class="header__button-menu"></button>
+            </li>
+            <li class="header__list-item">
+              <form class="header__form-search">
+                <input
+                  name="search"
+                  placeholder="Я ищу..."
+                  type="search"
+                  class="header__input-search"
+                />
+                <button type="button" class="header__button-search"></button>
+              </form>
+            </li>
+            <li class="header__list-item">
+              <button
+                type="button"
+                class="header__button-navigation text text_size_small text_color_white"
+              >
+                <img src="./images/profile_icon.svg" alt="Иконка профиля" />
+                Профиль
+              </button>
+            </li>
+            <li class="header__list-item">
+              <button
+                type="button"
+                class="header__button-navigation text text_size_small text_color_white"
+              >
+                <img src="./images/basket_icon.svg" alt="Иконка корзины" />
+                <p class="circle">3</p>
+                Корзина
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="basket-container">
+          <h2 class="text text_size_extra-large text_weight_bold">Корзина</h2>
+          <div class="checkbox-container checkbox-container_for_basket">
+            <input
+              type="checkbox"
+              class="checkbox-container__custom-checkbox"
+              id="all_selected_items"
+              name="all_selected_items"
+              value="yes"
+            />
+            <label for="all_selected_items" class="text text_size_medium"
+              >Выбрать все</label
+            >
+            <button
+              type="button"
+              class="button button_size_small button_img_hide"
+              id="button_visible_products"
+            ></button>
+          </div>
+          <ul class="cards"></ul>
+        </section>
+        <section class="missing-container">
+          <div class="checkbox-container checkbox-container_for_missing-items">
+            <h3 class="text text_size_medium text_weight_semibold">
+              Отсутствуют · 3 товара
+            </h3>
+            <button
+              type="button"
+              class="button button_size_small button_img_hide"
+              id="button_visible_miss_products"
+            ></button>
+          </div>
+          <ul class="cards cards_for_missing-items" id="list-missing"></ul>
+        </section>
+        <section class="amount">
+          <ul class="amount__list">
+            <li class="amount__item">
+              <h2 class="text text_size_large text_weight_bold">Итого</h2>
+              <p
+                class="text text_size_large text_weight_bold"
+                id="total-amount"
+              >
+                2 101 063 сом
+              </p>
+            </li>
+            <li class="amount__item">
+              <p class="text text_size_medium" id="number_of_goods">203 товара</p>
+              <p class="text text_size_medium" id="total_price"></p>
+            </li>
+            <li class="amount__item">
+              <p class="text text_size_medium">Скидка</p>
+              <p class="text text_size_medium">&minus;200 985 сом</p>
+            </li>
+            <li class="amount__item">
+              <p class="text text_size_medium">Доставка</p>
+              <p class="text text_size_medium">Бесплатно</p>
+            </li>
+          </ul>
+          <div class="amount__list">
+            <div class="amount__item amount__item_hide">
+              <h3 class="text text_size_medium text_weight_bold">
+                Доставка в пункт выдачи
+              </h3>
+              <button
+                type="button"
+                class="button button_img_edit button_size_small"
+                id="delivery_button_second"
+              ></button>
+            </div>
+            <div class="amount__adress">
+              <p class="text text_size_small text_hide">
+                Бишкек, улица Ахматбека Суюмбаева, 12/1
+              </p>
+              <p class="text text_size_small text_color_pink border text_hide">
+                5–8 фев
+              </p>
+              <div class="description description_frame">
+                <img
+                  src="./images/price shipping.svg"
+                  alt="Бесплатная доставка"
+                />
+                <p class="text text_size_small">
+                  Обратная доставка товаров на склад при отказе &mdash;
+                  <span
+                    class="text_color_green-first"
+                    data-title="Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно"
+                    >бесплатно</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="amount__list">
+            <div class="amount__item amount__item_hide">
+              <h3 class="text text_size_medium text_weight_bold">
+                Оплата картой
+              </h3>
+              <button
+                type="button"
+                class="button button_img_edit button_size_small"
+                id="button_pay_change_from_amount"
+              ></button>
+            </div>
+            <div class="payment-systems payment-systems_hide">
+              <img
+                src="./images/mir.svg"
+                alt="Бесплатная доставка"
+                class="payment-system"
+              />
+              <p class="text text_size_small">1234 12•• •••• 1234</p>
+            </div>
+            <div class="amount__write-off checkbox-container">
+              <input
+                type="checkbox"
+                class="checkbox-container__custom-checkbox"
+                id="checkbox-amount"
+                name="checkbox-amount"
+                value="yes"
+              />
+              <label for="checkbox-amount" class="text text_size_small"
+                >Списать оплату сразу</label
+              >
+              <p class="text text_size_small">
+                Спишем оплату с карты при получении
+              </p>
+            </div>
+          </div>
+          <div class="amount__list">
+            <button
+              id="button-amount"
+              type="submit"
+              class="text text_size_medium text_weight_bold text_color_white button button_size_long"
+            >
+              Заказать
+            </button>
+            <div class="offer">
+              <img src="./images/accept.svg" alt="" />
+              <p class="text text_size_small">
+                Соглашаюсь
+                <a href=""
+                  >с правилами пользования торговой площадкой и возврата</a
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="delivery">
+          <div class="delivery__title-container">
+            <h2 class="text text_size_large text_weight_bold">
+              Способ доставки
+            </h2>
+            <button
+              type="button"
+              class="delivery__button-transperant text text_size_medium text_weight_bold text_color_pink"
+              id="delivery_button"
+            >
+              Изменить
+            </button>
+          </div>
+          <ul class="delivery__list">
+            <li class="delivery__item">
+              <h3 class="text text_medium text_weight_semibold">
+                Пункт выдачи
+              </h3>
+              <div class="delivery__address">
+                <p class="text text_size_medium" id="adress-insert">
+                  Бишкек, улица Ахматбека Суюмбаева, 12/1
+                </p>
+                <p class="text text_size_small">Ежедневно с 10 до 21</p>
+              </div>
+            </li>
+            <li class="delivery__item">
+              <h3 class="text text_size_medium text_weight_semibold">
+                Стоимость доставки
+              </h3>
+              <p class="text text_size_medium">Бесплатно</p>
+            </li>
+            <li class="delivery__item">
+              <h3 class="text text_size_medium text_weight_semibold">
+                5—6 февраля
+              </h3>
+              <ul class="img-container">
+                <li>
+                  <img src="./images/example1.jpg" alt="" class="img-item" />
+                  <p></p>
+                </li>
+                <li>
+                  <img src="./images/example2.jpg" alt="" class="img-item" />
+                  <p></p>
+                </li>
+                <li>
+                  <img src="./images/example3.jpg" alt="" class="img-item" />
+                  <p></p>
+                </li>
+              </ul>
+            </li>
+            <li class="delivery__item">
+              <h3 class="text text_size_medium text_weight_semibold">
+                7—8 февраля
+              </h3>
+              <div class="img-container">
+                <img src="./images/example2.jpg" alt="" class="img-item" />
+                <p></p>
+              </div>
+            </li>
+          </ul>
+          <div class="description">
+            <img src="./images/price shipping.svg" alt="Бесплатная доставка" />
+            <p class="text text_size_small">
+              Обратная доставка товаров на склад при отказе &mdash;
+              <span
+                class="text_color_green"
+                data-title="Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно"
+                >бесплатно</span
+              >
+            </p>
+          </div>
+        </section>
+        <section class="payment-method">
+          <div class="payment-method__delivery-item">
+            <h2 class="text text_size_large text_weight_bold">Способ оплаты</h2>
+            <button
+              type="button"
+              class="payment-method__button-transperant text text_size_medium text_weight_bold text_color_pink"
+              id="button_pay_change"
+            >
+              Изменить
+            </button>
+          </div>
+          <div class="payment-systems">
+            <img
+              src="./images/mir.svg"
+              alt="Бесплатная доставка"
+              class="payment-system"
+            />
+            <p class="text text_size_medium">
+              1234 12•• •••• 1234 <span>01/30</span>
+            </p>
+            <p class="text text_size_small">
+              Спишем оплату с карты при получении
+            </p>
+          </div>
+        </section>
+        <section class="recipient">
+          <h2 class="text text_size_large text_weight_bold">Получатель</h2>
+          <form
+            name="recipient-details"
+            class="form"
+            method="post"
+            id="recipient_edit_form"
+            novalidate
+          >
+            <fieldset class="form__input form__input_recipient">
+              <div class="form__input-item">
+                <label
+                  for="name"
+                  class="text text_size_small text_color_grey form__label"
+                  id="name_label"
+                  >Имя</label
+                >
+                <input
+                  type="text"
+                  class="form__input-input text text_size_medium"
+                  name="name"
+                  id="name"
+                  placeholder="Укажите имя"
+                  value=""
+                  pattern="^[a-zA-ZаА-яЯёЁ\s\-]+$"
+                  data-error-message="Укажите имя"
+                  required
+                />
+                <span class="form__item-error name-error"></span>
+              </div>
+              <div class="form__input-item">
+                <label
+                  for="surname"
+                  class="form__label text text_size_small text_color_grey"
+                  id="surname_label"
+                  >Фамилия</label
+                >
+                <input
+                  type="text"
+                  class="form__input-input text text_size_medium"
+                  name="surname"
+                  id="surname"
+                  placeholder="Введите фамилию"
+                  value=""
+                  pattern="^[a-zA-ZаА-яЯёЁ\s\-]+$"
+                  data-error-message="Введите фамилию"
+                  required
+                />
+                <span class="form__item-error surname-error"></span>
+              </div>
+            </fieldset>
+            <fieldset class="form__input form__input_info">
+              <div class="form__input-item">
+                <label
+                  for="email"
+                  class="form__label text text_size_small text_color_grey"
+                  id="email_label"
+                  >Электронная почта</label
+                >
+                <input
+                  type="email"
+                  class="form__input-input text text_size_medium"
+                  name="email"
+                  id="email"
+                  placeholder="Укажите электронную почту"
+                  value=""
+                  pattern="^[a-zA-ZаА-яЯёЁ\s\-]+$"
+                  data-error-message="Проверьте адрес электронной почты"
+                  required
+                />
+                <span class="form__item-error email-error"></span>
+              </div>
+              <div class="form__input-item">
+                <label
+                  for="tel"
+                  class="form__label text text_size_small text_color_grey"
+                  id="tel_label"
+                  >Телефон</label
+                >
+                <input
+                  type="tel"
+                  class="form__input-input text text_size_medium"
+                  name="tel"
+                  id="tel"
+                  placeholder="Укажите номер телефона"
+                  value=""
+                  pattern="^\+?\d{1}\s\d{3}\s\d{3}\s\d{2}\s\d{2}$"
+                  data-error-message="Формат: +9 999 999 99 99"
+                  maxlength="30"
+                  required
+                />
+                <span class="form__item-error tel-error"></span>
+              </div>
+              <div class="form__input-item">
+                <label
+                  for="number"
+                  class="form__label text text_size_small text_color_grey"
+                  id="number_label"
+                  >ИНН для таможни</label
+                >
+                <input
+                  type="text"
+                  class="form__input-input text text_size_medium"
+                  name="number"
+                  id="number"
+                  placeholder="Укажите ИНН"
+                  value=""
+                  pattern="^[0-9]{14}"
+                  data-error-message="Проверьте ИНН"
+                  required
+                />
+                <label for="number" class="text text_size_small"
+                  >Для таможенного оформления</label
+                >
+                <span class="form__item-error number-error"></span>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="text text_size_small text_color_white">
+          &copy; 2022 ООО «Товары и точка»
+        </p>
+        <nav class="navigation-mobile">
+          <ul class="navigation-mobile__list">
+            <li class="navigation-mobile__item">
+              <button type="button" class="navigation-mobile__button">
+                <img src="./images/home.svg" alt="Экран домой" />
+              </button>
+            </li>
+            <li class="navigation-mobile__item">
+              <button type="button" class="navigation-mobile__button">
+                <img src="./images/catalog.svg" alt="Каталог" />
+              </button>
+            </li>
+            <li class="navigation-mobile__item">
+              <button type="button" class="navigation-mobile__button">
+                <img src="./images/cart.svg" alt="Корзина" />
+              </button>
+              <p class="circle">3</p>
+            </li>
+            <li class="navigation-mobile__item">
+              <button type="button" class="navigation-mobile__button">
+                <img src="./images/favorites.svg" alt="Избранное" />
+              </button>
+            </li>
+            <li class="navigation-mobile__item">
+              <button type="button" class="navigation-mobile__button">
+                <img src="./images/profile.svg" alt="Иконка профиля" />
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+    <div class="popup" id="delivery_method">
+      <div class="popup__container">
+        <div class="popup__hader-container">
+          <h3 class="text text_weight_bold text_size_medium-large">
+            Способ доставки
+          </h3>
+          <button
+            type="button"
+            class="popup__figure-toggle-image"
+            aria-label="closed_button"
+            id="close_button_delivery_method"
+          ></button>
+        </div>
+        <div class="popup__buttons-container">
+          <button
+            type="button"
+            class="popup__button text text_weight_bold text_size_small"
+            id="pick-up_point"
+          >
+            В пункт выдачи
+          </button>
+          <button
+            type="button"
+            id="courier"
+            class="popup__button text text_weight_bold text_size_small"
+          >
+            Курьером
+          </button>
+        </div>
+        <div class="popup__delivery-addresses">
+          <h4 class="text text_size_small text_weight_bold">Мои адреса</h4>
+          <ul class="popup__list"></ul>
+        </div>
+        <button
+          id="button-select"
+          type="button"
+          class="text text_size_medium text_weight_bold text_color_white button button_size_medium"
+        >
+          Выбрать
+        </button>
+      </div>
+    </div>
+    <div class="popup" id="pay-method">
+      <div class="popup__container popup__container_pay">
+        <div class="popup__hader-container">
+          <h3 class="text text_weight_bold text_size_medium-large">
+            Способ оплаты
+          </h3>
+          <button
+            type="button"
+            class="popup__figure-toggle-image"
+            aria-label="closed_button"
+            id="close_button_delivery_method"
+          ></button>
+        </div>
+        <div class="popup__delivery-addresses">
+          <ul class="popup__list popup__list_pay"  id="popup__list_pay"></ul>
+        </div>
+        <button
+          id="button-select"
+          type="button"
+          class="text text_size_medium text_weight_bold text_color_white button button_size_medium"
+        >
+          Выбрать
+        </button>
+      </div>
+    </div>
+    <template id="element-template">
+      <li class="element">
+        <div class="checkbox-container checkbox-container_for_card">
+          <div class="element__checkbox-container">
+            <input
+              type="checkbox"
+              class="checkbox-container__custom-checkbox"
+              name="checkbox_item"
+              value="yes"
+            />
+            <label class="label"></label>
+          </div>
+          <img src="" alt="" class="element__image" />
+        </div>
+        <ul class="element__list" id="char">
+          <li class="text element__item_size" id="name"></li>
+          <li class="element__item element__item-container" id="params">
+            <span id="color"> </span>
+            <span id="size" class="element__size"></span>
+          </li>
+          <li class="element__item element__item_color">
+            <p id="stock" class="text text_color_grey text_size_small"></p>
+            <button
+              type="button"
+              class="button button_size_small button_img_info"
+            ></button>
+            <div class="element__info-active">
+              <h3
+                id="provider"
+                class="text text_weight_bold text_size_small"
+              ></h3>
+              <p id="ogrn" class="text text_size_small"></p>
+              <p id="adress" class="text text_size_small"></p>
+            </div>
+          </li>
+        </ul>
+        <div class="element__list element__list_markings">
+          <div class="element__item" id="count-container">
+            <div class="element__counter-container">
+              <button type="button" class="element__count element__count-minus">
+                &minus;
+              </button>
+              <p class="element__amount-counts"></p>
+              <button type="button" class="element__count element__count-plus">
+                +
+              </button>
+            </div>
+          </div>
+          <p class="element__item" id="quantity"></p>
+          <div
+            class="element__item element__item-container element__item-container_end"
+          >
+            <button
+              type="button"
+              class="button button_size_small button_img_like"
+            ></button>
+            <button
+              type="button"
+              class="button button_size_small button_img_clear"
+            ></button>
+          </div>
+        </div>
+        <div class="element__price-container" id="price-container">
+          <p class="element__price" id="discount"></p>
+          <del class="element__price element__price_small" id="price"></del>
+          <ul class="element__info-price-active">
+            <li class="element__item-discount">
+              <p class="text text_size_small">Скидка 55%</p>
+              <p class="text text_size_small">&minus;300 сом</p>
+            </li>
+            <li class="element__item-discount">
+              <p class="text text_size_small">Скидка покупателя 10%</p>
+              <p class="text text_size_small">&minus;30 сом</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </template>
+    <template id="popup-addresses">
+      <li class="popup__list-item">
+        <input
+          class="popup__custom-radio"
+          name="color"
+          type="radio"
+          value="green"
+        />
+        <label
+          class="text text_size_medium lable-radio"
+        ></label>
+        <button
+          type="button"
+          class="button button_size_small button_img_clear"
+        ></button>
+      </li>
+    </template>
+    <template id="popup-pay">
+      <li class="popup__list-item popup__list-item_cards">
+        <input
+          class="popup__custom-radio"
+          name="color"
+          type="radio"
+          value="green"
+        />
+        <label
+        class="lable-radio"
+      ></label>
+        <img src="" alt="" class="payment-system payment-system_popup">
+        <p class="text text_size_medium popup__card-number"></p>
+      </li>
+    </template>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

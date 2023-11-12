@@ -1,0 +1,12 @@
+.offer {
+    display: flex;
+    gap: 8px;
+    padding-top: 14px;
+}
+
+@media screen and (max-width: 1350px) {
+    .offer {
+      max-width: 100%;
+      padding-top: 10px;
+    }
+  }

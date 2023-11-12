@@ -1,0 +1,4 @@
+.button_img_hide-active {
+    background: no-repeat center/20px url("../../../images/hide.svg");
+    justify-self: flex-end;
+}

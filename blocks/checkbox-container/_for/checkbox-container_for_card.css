@@ -1,0 +1,16 @@
+.checkbox-container_for_card {
+  width: 106px;
+  align-self: flex-start;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+}
+
+@media screen and (max-width: 687px) {
+  .checkbox-container_for_card {
+    align-self: flex-start;
+    align-items: flex-start;
+    grid-template-columns: 100%;
+  }
+}

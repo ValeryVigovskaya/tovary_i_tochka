@@ -1,0 +1,20 @@
+.form__item-error {
+    font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--system-orange, #F55123);;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  visibility:hidden;
+  overflow-y: hidden;
+  opacity:0;
+  padding-top: 5px;
+  box-sizing: border-box;
+  min-height: 35px;
+}
+
+@media screen and (max-width: 687px) {
+  .form__item-error {
+    min-height: 16px;
+  }
+}

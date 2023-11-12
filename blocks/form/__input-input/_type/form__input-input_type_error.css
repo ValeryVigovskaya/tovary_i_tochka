@@ -1,0 +1,4 @@
+.form__input-input_type_error {
+    border-bottom-color: var(--system-orange, #F55123);
+    color: var(--system-orange, #F55123);
+}

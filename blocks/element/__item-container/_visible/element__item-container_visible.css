@@ -1,0 +1,8 @@
+.element__item-container_visible {
+    /* visibility: hidden;
+    z-index: -1;
+    position: absolute;
+    top: 0; */
+    display: none;
+    padding-top: 0;
+}

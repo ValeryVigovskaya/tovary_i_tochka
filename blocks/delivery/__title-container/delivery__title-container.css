@@ -1,0 +1,13 @@
+.delivery__title-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 32px;
+}
+
+@media screen and (max-width: 687px) {
+    .delivery__title-container {
+        height: 28px;
+    }
+  }

@@ -1,0 +1,18 @@
+.button_img_info {
+    background: no-repeat center/20px url("../../../images/info.svg");
+    align-self: flex-end;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.button_img_info:hover + .element__info-active,
+.button_img_info:focus + .element__info-active {
+  display: flex;
+}
+
+@media screen and (max-width: 320px) {
+  .button_img_info {
+    display: none;
+  }
+}

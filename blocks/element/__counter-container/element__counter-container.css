@@ -1,0 +1,18 @@
+.element__counter-container {
+    width: 96px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: flex-end;
+    background: var(--background-white, #FFF);
+}
+
+@media screen and (max-width: 687px) {
+    .element__counter-container {
+        width: 80px;
+        height: 32px;
+        justify-content: space-between;
+        align-items: center;
+    }
+  }

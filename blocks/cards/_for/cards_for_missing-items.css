@@ -1,0 +1,18 @@
+.cards_for_missing-items {
+  gap: 12px;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 1350px) {
+  .cards_for_missing-items {
+    gap: 12px;
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 81%;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .cards_for_missing-items {
+    grid-template-rows: repeat(auto-fit, minmax(22px, auto));
+  }
+}

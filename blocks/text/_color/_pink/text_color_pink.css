@@ -1,0 +1,3 @@
+.text_color_pink {
+    color: var(--system-magenta, #CB11AB);
+}

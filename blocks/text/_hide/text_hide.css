@@ -1,0 +1,5 @@
+@media screen and (max-width: 320px) {
+    .text_hide {
+      display: none;
+    }
+  }

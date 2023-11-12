@@ -1,0 +1,4 @@
+.text_weight_semibold {
+    line-height: 24px; /* 150% */
+    font-weight: 600;
+}

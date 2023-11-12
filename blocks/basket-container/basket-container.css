@@ -1,0 +1,23 @@
+.basket-container {
+  max-width: 96.5%;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 42px 0 0 0;
+}
+
+@media screen and (max-width: 1350px) {
+  .basket-container {
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .basket-container {
+    max-width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    padding: 16px 16px 0 16px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}

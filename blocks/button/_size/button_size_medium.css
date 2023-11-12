@@ -1,0 +1,18 @@
+.button_size_medium {
+    width: 164px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--system-magenta, #cb11ab);
+}
+
+.button_size_medium:hover {
+    opacity: 0.6;
+    transition: 0.35s;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 557px) {
+    .button_size_medium {
+      width: 288px;
+    }
+  }

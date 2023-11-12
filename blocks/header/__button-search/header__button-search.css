@@ -1,0 +1,17 @@
+.header__button-search {
+  width: 24px;
+  height: 24px;
+  background: no-repeat center/24px transparent
+    url("../../../images/Search.svg");
+  border: none;
+}
+
+@media screen and (max-width: 687px) {
+  .header__button-search {
+    width: 28px;
+    height: 28px;
+    background: no-repeat center/24px transparent
+      url("../../../images/icon-search-white.svg");
+    padding: 0;
+  }
+}

@@ -1,0 +1,14 @@
+.element__item-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+@media screen and (max-width: 687px) {
+  .element__item-container {
+    max-width: 100%;
+    align-self: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+  }
+}

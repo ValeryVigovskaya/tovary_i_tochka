@@ -1,0 +1,15 @@
+.amount__item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.amount__item:first-of-type {
+  padding-bottom: 7px;
+}
+
+@media screen and (max-width: 687px) {
+  .amount__item:first-of-type {
+    padding-bottom: 4px;
+  }
+}

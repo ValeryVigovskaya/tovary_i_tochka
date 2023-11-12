@@ -1,0 +1,15 @@
+.element__item_color {
+    color: var(--system-gray, #9797AF);
+    /* width: 200px; */
+    padding-bottom: 0px;
+    display: grid;
+    grid-template-columns: 112px 20px;
+    gap: 5px;
+    position: relative;
+}
+
+@media screen and (max-width: 687px) {
+    .element__item_color {
+        width: 192px;
+    }
+  }

@@ -1,0 +1,29 @@
+.missing-container {
+  max-width: 96.5%;
+  padding: 0 0 0 0;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+@media screen and (max-width: 1350px) {
+  .missing-container {
+    max-width: 95%;
+  }
+}
+
+/* @media screen and (max-width: 987px) {
+  .missing-container {
+    max-width: 80%;
+  }
+} */
+
+@media screen and (max-width: 320px) {
+  .missing-container {
+    max-width: 100%;
+    padding: 0 16px; 
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}

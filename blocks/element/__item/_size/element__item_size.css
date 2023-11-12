@@ -1,0 +1,15 @@
+.element__item_size {
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+}
+
+@media screen and (max-width: 687px) {
+  .element__item_size {
+    font-size: 14px;
+    line-height: 20px; /* 150% */
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; 
+  }
+}

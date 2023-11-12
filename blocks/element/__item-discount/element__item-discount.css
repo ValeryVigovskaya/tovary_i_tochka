@@ -1,0 +1,4 @@
+.element__item-discount {
+    display: flex;
+    justify-content: space-between;
+}

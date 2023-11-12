@@ -1,0 +1,28 @@
+.circle {
+  margin: 0;
+  width: 12px;
+  height: 16px;
+  transform: rotate(0.074deg);
+  padding: 0px 2px;
+  border-radius: 16px;
+  background: var(--system-orange, #f55123);
+  color: var(--system-white, #fff);
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 35px;
+  top: -5px;
+}
+
+@media screen and (max-width: 687px) {
+  .circle {
+    text-align: center;
+    font-family: 'Segoe UI';
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    left: 32px;
+    top: 0;
+  }
+}

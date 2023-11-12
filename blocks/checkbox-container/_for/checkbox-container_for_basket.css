@@ -1,0 +1,15 @@
+.checkbox-container_for_basket {
+    max-width: 100%;
+    padding-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    padding-bottom: 18.5px;
+    /* gap: 16px; */
+}
+
+@media screen and (max-width: 687px) {
+    .checkbox-container_for_basket {
+        padding-top: 17px;
+    }
+  }

@@ -1,0 +1,6 @@
+.payment-system {
+  width: 32px;
+  height: 24px;
+  border-radius: 4px;
+  background: var(--background-smoky, #f6f6fa);
+}

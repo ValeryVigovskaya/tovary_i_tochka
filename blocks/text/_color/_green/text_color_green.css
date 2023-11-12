@@ -1,0 +1,19 @@
+.text_color_green {
+  color: var(--system-green, #0cb477);
+  border-bottom: 1px dashed #0cb477;
+  cursor: pointer;
+}
+
+.text_color_green[data-title]:hover:before {
+  content: attr(data-title);
+  position: absolute;
+  width: 256px;
+  color: var(--text-black, #000);
+  padding: 10px 16px 14px;
+  bottom: -45px;
+  left: 249px;
+  border-radius: 8px;
+  background: var(--background-white, #fff);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),
+    0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+}

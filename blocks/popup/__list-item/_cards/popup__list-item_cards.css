@@ -1,0 +1,4 @@
+.popup__list-item_cards {
+    justify-content: flex-start;
+    gap: 44px;
+}

@@ -1,0 +1,16 @@
+.popup__list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 33px;
+}
+
+@media screen and (max-width: 557px) {
+    .popup__delivery-addresses {
+        gap: 20px;
+        padding-bottom: 119px;
+    }
+  }

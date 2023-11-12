@@ -1,0 +1,4 @@
+.button_img_like_active {
+    height: 16px;
+    background: no-repeat center/20px url("../../../../images/purpleLike.svg");
+}

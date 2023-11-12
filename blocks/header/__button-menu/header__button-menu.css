@@ -1,0 +1,21 @@
+.header__button-menu {
+  width: 48px;
+  height: 48px;
+  background: no-repeat center transparent
+    url("../../../images/menu_button.svg");
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 8px 8px;
+}
+
+@media screen and (max-width: 687px) {
+  .header__button-menu {
+    width: 28px;
+    height: 28px;
+    background: no-repeat center transparent
+    url("../../../images/icon-menu-mob.svg");
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+}

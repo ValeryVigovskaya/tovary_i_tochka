@@ -1,0 +1,11 @@
+.delivery__button-transperant {
+        background: transparent;
+        border: none;
+        padding: 0 6px;
+}
+
+.delivery__button-transperant:hover {
+    opacity: 0.6;
+    transition: 0.35s;
+    cursor: pointer;
+  }

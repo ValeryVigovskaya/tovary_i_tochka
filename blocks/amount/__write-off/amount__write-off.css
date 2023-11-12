@@ -1,0 +1,12 @@
+.amount__write-off {
+  max-width: 100%;
+  border-radius: 8px;
+  background: var(--background-smoky, #f6f6fa);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 12px;
+  min-height: 46px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}

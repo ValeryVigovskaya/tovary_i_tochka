@@ -1,0 +1,7 @@
+.form__input-input {
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--rulers-rulers-input, rgba(0, 0, 0, 0.20));
+  justify-self: flex-end;
+}

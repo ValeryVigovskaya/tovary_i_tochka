@@ -1,0 +1,21 @@
+.description_frame {
+    border-radius: 8px;
+    background: var(--background-smoky, #f6f6fa);
+    margin-top: 7px;
+    padding: 8px 8px 12px;
+    grid-template-columns: 22px 335px;
+}
+
+@media screen and (max-width: 1350px) {
+    .description_frame {
+        grid-template-columns: 22px 209px;
+        margin-top: 11px;
+        align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 687px) {
+    .description_frame {
+        grid-template-columns: 22px 242px;
+    }
+  }

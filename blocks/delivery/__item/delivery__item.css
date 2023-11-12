@@ -1,0 +1,20 @@
+.delivery__item {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 153px 398px;
+
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+@media screen and (max-width: 687px) {
+    .delivery__item {
+      grid-template-columns: 288px;
+      gap: 0;
+    }
+    .delivery__item:last-of-type {
+        padding-top: 14px;
+      }
+  }

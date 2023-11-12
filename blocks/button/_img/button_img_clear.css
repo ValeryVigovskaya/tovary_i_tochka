@@ -1,0 +1,11 @@
+.button_img_clear {
+    background: no-repeat center/20px url("../../../../images/clear.svg");
+}
+
+.button_img_clear:hover {
+    cursor: pointer;
+    transition: transform 4s 1s;
+    background: var(--system-orange, #F55123);
+    -webkit-mask-image: url('../../../../images/clear.svg');
+    mask-image: url("../../../../images/clear.svg");
+}

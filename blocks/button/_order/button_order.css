@@ -1,0 +1,8 @@
+.button_order {
+  max-width: 100%;
+  border-radius: 8px;
+  background: var(--system-magenta, #cb11ab);
+  height: 44px;
+  padding: 0px 32px 5px 32px;
+  border: none;
+}

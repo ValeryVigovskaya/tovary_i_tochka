@@ -1,0 +1,3 @@
+.text_color_grey {
+    color: var(--system-gray, #9797AF);
+}

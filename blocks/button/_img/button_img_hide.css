@@ -1,0 +1,20 @@
+.button_img_hide {
+    background: no-repeat center/20px url("../../../../images/icon-20.svg");
+    justify-self: flex-end;  
+}
+
+/* @media screen and (max-width: 1350px) {
+    .button_img_hide {
+        margin-right: 10px;
+    }
+  } */
+
+
+@media screen and (max-width: 687px) {
+    .button_img_hide {
+        grid-row-start: 1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        
+    }
+  }

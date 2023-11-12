@@ -1,0 +1,21 @@
+.payment-systems {
+  max-width: 45%;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1350px) {
+  .payment-systems {
+    max-width: 60%;
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .payment-systems {
+    max-width: 100%;
+    padding-top: 0;
+  }
+} 

@@ -1,0 +1,10 @@
+.text_size_extra-large {
+    font-size: 28px;
+    line-height: 24px; /* 85.714% */
+}
+
+@media screen and (max-width: 687px) {
+    .text_size_extra-large {
+        font-size: 26px;
+    }
+  }

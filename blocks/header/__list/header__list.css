@@ -1,0 +1,24 @@
+.header__list {
+    max-width: 100%;
+    margin: 16px 0;
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    align-items: center;
+}
+
+@media screen and (max-width: 1023px) {
+    .header__list {
+        /* max-width: 80%; */
+        margin: 14px auto 11px;
+        gap: 30px;
+    }
+  }
+
+@media screen and (max-width: 987px) {
+    .header__list {
+        justify-content: space-between;
+        margin: 14px 0 11px;
+        gap: 0;
+    }
+  }

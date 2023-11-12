@@ -1,0 +1,9 @@
+.button_img_edit {
+    background: no-repeat center/20px url("../../../../images/edit-icon.svg");
+}
+
+.button_img_edit:hover {
+    opacity: 0.6;
+    transition: 0.35s;
+    cursor: pointer;
+  }

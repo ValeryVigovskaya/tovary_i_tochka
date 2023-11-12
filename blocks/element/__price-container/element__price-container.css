@@ -1,0 +1,30 @@
+.element__price-container {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-self: flex-end;
+  padding-right: 15px;
+  position: relative;
+}
+
+@media screen and (max-width: 1350px) {
+  .element__price-container {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .element__price-container {
+    width: 192px;
+    height: 24px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 0;
+  }
+}

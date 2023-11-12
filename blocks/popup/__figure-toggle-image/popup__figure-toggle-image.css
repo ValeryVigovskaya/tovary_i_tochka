@@ -1,0 +1,23 @@
+.popup__figure-toggle-image{
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    background: no-repeat center/24px transparent url("../../../images/search-close.svg");
+    border: none;
+  }
+  
+  .popup__figure-toggle-image:hover {
+    opacity: 0.6;
+    transition: 0.35s;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 557px) {
+    .popup__figure-toggle-image {
+      /* width: 20px;
+      height: 20px;
+      right: 0px;
+      top: -32px;
+      background-size: 20px; */
+    }
+  }

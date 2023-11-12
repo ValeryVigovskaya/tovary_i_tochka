@@ -1,0 +1,13 @@
+.form__input_recipient {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 687px) {
+    .form__input_recipient {
+      max-width: 100%;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(2, 1fr);
+      height: 115px;
+      gap: 16px;
+    }
+  }

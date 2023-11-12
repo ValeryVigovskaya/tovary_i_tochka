@@ -1,0 +1,100 @@
+.header__list-item:nth-of-type(1n) {
+    width: 9%;
+    padding-right: 79px;
+}
+
+.header__list-item:nth-of-type(2n){
+    width: 72%;
+    padding-right: 33px;
+}
+
+.header__list-item:nth-of-type(3n) {
+    width: 4%;
+    align-self: self-start;
+    justify-self: flex-end;
+    padding-right: 40px;
+}
+
+.header__list-item:nth-of-type(4n) {
+    width: 3%;
+    justify-self: flex-end;
+    padding-right: 0;
+    align-self: self-start;
+    position: relative;
+}
+
+@media screen and (max-width: 1350px) {
+    .header__list-item:nth-of-type(1n) {
+        width: 14%;
+        padding-right: 63px;
+    }
+
+    .header__list-item:nth-of-type(2n){
+        width: 60.5%;
+        padding-right: 33px;
+    }
+    
+    .header__list-item:nth-of-type(3n) {
+        width: 4%;
+        align-self: self-start;
+        justify-self: flex-end;
+        padding-right: 57px;
+    }
+    
+    .header__list-item:nth-of-type(4n) {
+        width: 3%;
+        justify-self: flex-end;
+        padding-right: 0;
+        align-self: self-start;
+        position: relative;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .header__list-item:nth-of-type(1n) {
+        width: 14%;
+        padding-right: 10px;
+    }
+
+    .header__list-item:nth-of-type(2n){
+        width: 60.5%;
+        padding-right: 33px;
+    }
+    
+    .header__list-item:nth-of-type(3n) {
+        width: 4%;
+        align-self: self-start;
+        justify-self: flex-end;
+        padding-right: 10px;
+    }
+    
+    .header__list-item:nth-of-type(4n) {
+        width: 3%;
+        justify-self: flex-end;
+        padding-right: 0;
+        align-self: self-start;
+        position: relative;
+    }
+  }
+
+
+
+  @media screen and (max-width: 987px) {
+    .header__list-item:nth-of-type(1n) {
+        width: 14%;
+        padding-right: 0;
+    }
+
+    .header__list-item:nth-of-type(2n){
+        width: 10%;
+        padding-right: 0;
+    }
+    
+    .header__list-item:nth-of-type(3n) {
+        display: none;
+    }
+    
+    .header__list-item:nth-of-type(4n) {
+        display: none;
+    }
+  }

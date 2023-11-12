@@ -1,0 +1,32 @@
+.payment-method {
+  max-width: 97%;
+  border-radius: 16px;
+  background: var(--background-white, #fff);
+  padding: 16px 17px 24px 24px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  margin: -27px 31px 0 0;
+  display: grid;
+  gap: 16px;
+}
+
+@media screen and (max-width: 1350px) {
+  .payment-method {
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .payment-method {
+    max-width: 320px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding: 16px 17px 22px 15px;
+    margin: -35px 0 0 0;
+    gap: 5px;
+  }
+}
