@@ -1,0 +1,5 @@
+.popup__rating {
+    display: none;
+    gap: 6px;
+    padding-left: 20px;
+}

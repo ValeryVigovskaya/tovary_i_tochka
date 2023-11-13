@@ -3,8 +3,8 @@
     line-height: 24px; /* 85.714% */
 }
 
-@media screen and (max-width: 687px) {
+@media screen and (max-width: 320px) {
     .text_size_extra-large {
-        font-size: 26px;
+        font-size: 20px;
     }
   }

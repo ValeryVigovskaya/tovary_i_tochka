@@ -10,6 +10,6 @@
 
 @media screen and (max-width: 687px) {
   .amount__item:first-of-type {
-    padding-bottom: 4px;
+    padding-bottom: 8px;
   }
 }

@@ -74,6 +74,7 @@
 @import url("../blocks/text/_color/_white/text_color_white.css");
 @import url("../blocks/text/_color/_grey/text_color_grey.css");
 @import url("../blocks/text/_color/_green/text_color_green.css");
+@import url("../blocks/text/_color/_orange/text_color_orange.css");
 @import url("../blocks/text/_color/_green-first/text_color_green-first.css");
 
 @import url("../blocks/description/description.css");
@@ -124,7 +125,7 @@
 @import url("../blocks/payment-method/__button-transperant/payment-method__button-transperant.css");
 @import url("../blocks/delivery/__address/delivery__address.css");
 @import url("../blocks/delivery/__button-transperant/delivery__button-transperant.css");
-
+@import url("../blocks/delivery/__working-hours/delivery__working-hours.css");
 @import url("../blocks/footer/footer.css");
 @import url("../blocks/payment-systems/_hide/payment-systems_hide.css");
 @import url("../blocks/navigation-mobile/navigation-mobile.css");
@@ -147,3 +148,4 @@
 @import url("../blocks/popup/__list-item/popup__list-item.css");
 @import url("../blocks/popup/__list-item/_cards/popup__list-item_cards.css");
 @import url("../blocks/popup/__card-number/popup__card-number.css");
+@import url("../blocks/popup/__rating/popup__rating.css");

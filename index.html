@@ -10,7 +10,7 @@
     <div class="page">
       <header class="header">
         <h1
-          class="header__logo text text_size_extra-large text_weight_semibold text_color_white"
+          class="text text_weight_semibold text_color_white header__logo "
         >
           Товары и точка
         </h1>
@@ -99,7 +99,9 @@
               </p>
             </li>
             <li class="amount__item">
-              <p class="text text_size_medium" id="number_of_goods">203 товара</p>
+              <p class="text text_size_medium" id="number_of_goods">
+                203 товара
+              </p>
               <p class="text text_size_medium" id="total_price"></p>
             </li>
             <li class="amount__item">
@@ -126,7 +128,7 @@
               <p class="text text_size_small text_hide">
                 Бишкек, улица Ахматбека Суюмбаева, 12/1
               </p>
-              <p class="text text_size_small text_color_pink border text_hide">
+              <p class="text text_size_small text_color_pink text_hide">
                 5–8 фев
               </p>
               <div class="description description_frame">
@@ -221,7 +223,11 @@
                 <p class="text text_size_medium" id="adress-insert">
                   Бишкек, улица Ахматбека Суюмбаева, 12/1
                 </p>
-                <p class="text text_size_small">Ежедневно с 10 до 21</p>
+                <div class="delivery__working-hours">
+                  <img src="./images/rating/rating/star_fill.svg" alt="" />
+                  <p class="text text_size_small">4.99</p>
+                  <p class="text text_size_small">Ежедневно с 10 до 21</p>
+                </div>
               </div>
             </li>
             <li class="delivery__item">
@@ -235,17 +241,17 @@
                 5—6 февраля
               </h3>
               <ul class="img-container">
-                <li>
+                <li style="position: relative">
                   <img src="./images/example1.jpg" alt="" class="img-item" />
-                  <p></p>
+                  <p class="circle text text_color_white text_size_small">3</p>
                 </li>
-                <li>
+                <li style="position: relative">
                   <img src="./images/example2.jpg" alt="" class="img-item" />
-                  <p></p>
+                  <p class="circle text text_color_white text_size_small">3</p>
                 </li>
-                <li>
+                <li style="position: relative">
                   <img src="./images/example3.jpg" alt="" class="img-item" />
-                  <p></p>
+                  <p class="circle text text_color_white text_size_small">3</p>
                 </li>
               </ul>
             </li>
@@ -255,7 +261,7 @@
               </h3>
               <div class="img-container">
                 <img src="./images/example2.jpg" alt="" class="img-item" />
-                <p></p>
+                <p class="circle text text_color_white text_size_small">3</p>
               </div>
             </li>
           </ul>
@@ -276,7 +282,7 @@
             <h2 class="text text_size_large text_weight_bold">Способ оплаты</h2>
             <button
               type="button"
-              class="payment-method__button-transperant text text_size_medium text_weight_bold text_color_pink"
+              class="text text_size_medium text_weight_bold text_color_pink payment-method__button-transperant"
               id="button_pay_change"
             >
               Изменить
@@ -509,7 +515,7 @@
           ></button>
         </div>
         <div class="popup__delivery-addresses">
-          <ul class="popup__list popup__list_pay"  id="popup__list_pay"></ul>
+          <ul class="popup__list popup__list_pay" id="popup__list_pay"></ul>
         </div>
         <button
           id="button-select"
@@ -568,7 +574,10 @@
               </button>
             </div>
           </div>
-          <p class="element__item" id="quantity"></p>
+          <p
+            class="element__item text text_size_small text_color_orange"
+            id="quantity"
+          ></p>
           <div
             class="element__item element__item-container element__item-container_end"
           >
@@ -600,15 +609,20 @@
     </template>
     <template id="popup-addresses">
       <li class="popup__list-item">
-        <input
-          class="popup__custom-radio"
-          name="color"
-          type="radio"
-          value="green"
-        />
-        <label
-          class="text text_size_medium lable-radio"
-        ></label>
+        <div>
+          <input
+            class="popup__custom-radio"
+            name="color"
+            type="radio"
+            value="green"
+          />
+          <label class="text text_size_medium lable-radio"></label>
+          <div class="popup__rating">
+            <img src="./images/rating/rating/star_fill.svg" alt="" />
+            <p class="text text_size_small rating"></p>
+            <p class="text text_size_small pick-up_point"></p>
+          </div>
+        </div>
         <button
           type="button"
           class="button button_size_small button_img_clear"
@@ -623,10 +637,8 @@
           type="radio"
           value="green"
         />
-        <label
-        class="lable-radio"
-      ></label>
-        <img src="" alt="" class="payment-system payment-system_popup">
+        <label class="lable-radio"></label>
+        <img src="" alt="" class="payment-system payment-system_popup" />
         <p class="text text_size_medium popup__card-number"></p>
       </li>
     </template>

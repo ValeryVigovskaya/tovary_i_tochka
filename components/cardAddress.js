@@ -11,6 +11,9 @@ export const newCardAdress = (item, data) => {
     } else {
         elementsClone.querySelector('.lable-radio').textContent = `г. ${item.city}, ${item.microdistrict ? (`микрорайон ${item.microdistrict
         },`) : ''} улица ${item.street}, д.${item.house_number}`;
+        elementsClone.querySelector('.popup__rating').style.display = "flex";
+        elementsClone.querySelector('.pick-up_point').textContent = item.pick_up_point;
+        elementsClone.querySelector('.rating').textContent = String(item.rating);
     };
     const radioBtn = elementsClone.querySelector(".popup__custom-radio");
     const label = elementsClone.querySelector(".lable-radio");

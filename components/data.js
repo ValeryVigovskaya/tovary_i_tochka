@@ -9,10 +9,6 @@ export const data = [
         "price": 1051,
         "newPrice": 522,
         "quantity": 3,
-        "discount": {
-            "regularDiscount": '55%',
-            "customerDiscount": '10%',
-        },
         "provider": {
             "stock": 'OOO «МЕГАПРОФСТИЛЬ»',
             "OGRN": 'ОГРН: 5167746237148',
@@ -28,10 +24,6 @@ export const data = [
         "price": 11500,
         "newPrice": 10500,
         "quantity": 1000,
-        "discount": {
-            "regularDiscount": '55%',
-            "customerDiscount": '10%',
-        },
         "provider": {
             "stock": 'OOO «МЕГАПРОФСТИЛЬ»',
             "OGRN": 'ОГРН: 5167746237148',
@@ -46,10 +38,6 @@ export const data = [
         "price": 475,
         "newPrice": 247,
         "quantity": 4,
-        "discount": {
-            "regularDiscount": '55%',
-            "customerDiscount": '10%',
-        },
         "provider": {
             "stock": 'OOO «МЕГАПРОФСТИЛЬ»',
             "OGRN": 'ОГРН: 5167746237148',

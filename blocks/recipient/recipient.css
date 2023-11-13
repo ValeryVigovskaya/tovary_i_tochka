@@ -28,7 +28,7 @@
     grid-row-start: 5;
     grid-row-end: 6;
     padding: 16px 17px 22px 15px;
-    margin: -35px 0 0 0;
+    margin: -32px 0 0 0;
     gap: 10px; 
     grid-template-rows: 28px 344px;
   }

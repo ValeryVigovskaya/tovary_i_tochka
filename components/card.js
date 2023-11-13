@@ -1,4 +1,4 @@
-import {formattedCost} from '../components/utils.js'
+import { formattedCost, totalPrice } from '../components/utils.js'
 
 //получение клонированной карточки
 export const newCard = (item) => {
@@ -14,29 +14,33 @@ export const newCard = (item) => {
     const label = elementsClone.querySelector('.label')
     let count = elementsClone.querySelector('.element__amount-counts');
     let quantity = elementsClone.querySelector('#quantity');
-    const priceNumber = formattedCost(item.price);
-    const discountNumber = formattedCost(item.newPrice);
-    
+    //const priceNumber = formattedCost(item.price);
+    const discountNumber = item.newPrice;
+    const priceNumber = item.price;
+    //const discountNumber = formattedCost(item.newPrice);
+    const price = elementsClone.querySelector('#price');
+    const discountPrice = elementsClone.querySelector('#discount');
 
     //стоимость за одну единицу товара
-    elementsClone.querySelector('#price').textContent = `${priceNumber} сом`;
+    price.textContent = `${priceNumber} сом`;
+    discountPrice.textContent = `${discountNumber} сом`
     //начальное состояние счетчика
     count.innerText = 1;
     buttonCountMinus.disabled = true;
     let quantityItem = item.quantity - 1;
     buttonCountMinus.classList.add("element__count-minus_inactive");
-    
+
     if (item.quantity > 0 && item.quantity < 100) {
         quantity.textContent = `Осталось ${quantityItem} шт`;
     } else {
         quantity.style.display = "none";
     }
 
-   //присвоение айди для чекбокса, чтобы корректно работал
+    //присвоение айди для чекбокса, чтобы корректно работал
     checkbox.id = item.price;
     label.htmlFor = checkbox.id;
 
-    increaseCounter(count, buttonCountPlus, buttonCountMinus, quantityItem, quantity);
+    increaseCounter(count, priceNumber, discountNumber, buttonCountPlus, buttonCountMinus, quantityItem, quantity, price, discountPrice);
 
 
     //изменение цвета лайка при клике
@@ -57,7 +61,7 @@ export const newCard = (item) => {
         const list = elementsClone.querySelector('#char');
         list.classList.add('element__list_miss');
         elementsClone.querySelector('.button_img_info').style.display = "none";
-        if (document.documentElement.clientWidth < 1000){
+        if (document.documentElement.clientWidth < 1000) {
             const visibleCount = elementsClone.querySelector('#count-container');
             visibleCount.style.visibility = "hidden";
             visibleCount.style.display = "block";
@@ -66,7 +70,7 @@ export const newCard = (item) => {
     if (item.stock) {
         elementsClone.querySelector('#stock').textContent = `${item.stock} OOO Вайлдберриз`;
         if (document.documentElement.clientWidth < 1000) {
-            elementsClone.querySelector('#stock').textContent = `${item.stock}`;
+            elementsClone.querySelector('#stock').textContent = item.stock;
         }
         elementsClone.querySelector('#provider').textContent = item.provider.stock;
         elementsClone.querySelector('#ogrn').textContent = item.provider.OGRN;
@@ -75,15 +79,11 @@ export const newCard = (item) => {
     addColorOrSize(item, elementsClone);
 
     if (item.price) {
-        const discount = elementsClone.querySelector('#discount');
-        discount.textContent = `${String(discountNumber)} сом`;
-
         if (document.documentElement.clientWidth > 1023) {
-            discount.style.fontSize = (discountNumber < 10000) ? "20px" : "16px";
+            discountPrice.style.fontSize = (discountNumber < 10000) ? "20px" : "16px";
         } else {
-            discount.style.fontSize = "16px";
+            discountPrice.style.fontSize = "16px";
         }
-
     }
     //слушатель для удаления карточки по клику
     elementsCloneDeleteButton.addEventListener('click', (e) => {
@@ -110,12 +110,18 @@ function addColorOrSize(item, elementsClone) {
     }
 }
 
-//функция работы счетчика количества айтемов в карточке
-function increaseCounter(count, buttonCountPlus, buttonCountMinus, quantity, itemQuantity) {
+//функция работы счетчика количества айтемов в карточке и суммы
+function increaseCounter(count, oldPrice, oldDiscountPrice, buttonCountPlus, buttonCountMinus, quantity, itemQuantity, price, priceDiscount) {
+    let insSum;
+    let insDiscount;
     buttonCountPlus.addEventListener('click', () => {
         count.innerText++;
         quantity--;
         itemQuantity.textContent = `Осталось ${quantity} шт`;
+        insSum = Number(count.textContent) * (oldPrice);
+        insDiscount = Number(count.textContent) * (oldDiscountPrice);
+        price.textContent = `${formattedCost(insSum)} сом`;
+        priceDiscount.textContent = `${formattedCost(insDiscount)} сом`;
         buttonCountMinus.disabled = false;
         buttonCountMinus.classList.remove("element__count-minus_inactive");
         if (quantity < 1) {
@@ -127,6 +133,10 @@ function increaseCounter(count, buttonCountPlus, buttonCountMinus, quantity, ite
         count.innerText--;
         quantity++;
         itemQuantity.textContent = `Осталось ${quantity} шт`;
+        insSum = insSum - oldPrice;
+        insDiscount = insDiscount - oldDiscountPrice;
+        price.textContent = `${formattedCost(insSum)} сом`;
+        priceDiscount.textContent = `${formattedCost(insDiscount)} сом`;
         buttonCountMinus.classList.remove("element__count-minus_inactive");
         buttonCountMinus.disabled = false;
         buttonCountPlus.classList.remove("element__count-minus_inactive");
@@ -135,8 +145,8 @@ function increaseCounter(count, buttonCountPlus, buttonCountMinus, quantity, ite
         if (count.textContent === '1') {
             buttonCountMinus.classList.add("element__count-minus_inactive");
             buttonCountMinus.disabled = true;
-        }
-    })
+     }
+    });
 }
 
 

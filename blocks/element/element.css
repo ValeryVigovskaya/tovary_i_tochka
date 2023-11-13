@@ -32,7 +32,7 @@
   }
 
   .element:nth-of-type(2){
-    padding-bottom: 12px;
+    padding-bottom: 20px;
     border-bottom: 1px solid var(--rulers-rulers, rgba(0, 0, 0, 0.10));
   }
 

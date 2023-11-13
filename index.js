@@ -28,7 +28,7 @@ cardInList(missingItems, elementsListInactive, newCard);
 
 //изменение текста на кнопке при клике на чекбокс
 checkboxAmount.addEventListener('click', function () {
-  buttonAmount.textContent = buttonAmount.textContent !== `Оплатить ${totalAmount.textContent}` ? `Оплатить ${totalAmount.textContent}` : 'Заказать'
+  buttonAmount.textContent = buttonAmount.textContent !== `Оплатить ${totalAmount.textContent}` ? `Оплатить ${totalAmount.textContent}` : 'Заказать';
 });
 
 
@@ -57,7 +57,7 @@ buttonPickUpPoint.addEventListener('click', function () {
   buttonPickUpPoint.classList.add('popup__button_active');
   buttonCourier.classList.remove('popup__button_active');
   elementsListAdress.innerHTML = '';
-  cardInList(deliveryMethods, elementsListAdress, newCardAdress)
+  cardInList(deliveryMethods, elementsListAdress, newCardAdress);
 });
 
 buttonCourier.addEventListener('click', function () {
@@ -70,17 +70,7 @@ buttonCourier.addEventListener('click', function () {
 //функция расчета скидки 
 const totalPriceFormat = formattedCost(totalPrice(data));
 
-totalСostField.textContent = `${totalPriceFormat} сом`
-
-let arrCounts = [];
-var options = elementsList.querySelectorAll('.element__amount-counts');
-
-for (var j = 0; j < options.length; j++) {
-  options[j].addEventListener('DOMCharacterDataModified', () => {
-    arrCounts.push(Number(options[j].textContent));
-    arrCounts?.reduce((partialSum, a) => partialSum + a);
-  })
-}
+totalСostField.textContent = `${totalPriceFormat} сом`;
 
 inputName.addEventListener('click', function (evt) {
   showLabel(inputName, labelName);
@@ -103,9 +93,6 @@ inputNumber.addEventListener('click', function (evt) {
   evt.preventDefault();
   showLabel(inputSurname, labelNumber);
 });
-
-
-
 
 enableValidation(settings);
 

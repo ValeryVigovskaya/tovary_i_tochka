@@ -13,6 +13,8 @@
 
 @media screen and (max-width: 687px) {
   .cards_for_missing-items {
+    max-width: 100%;
     grid-template-rows: repeat(auto-fit, minmax(22px, auto));
+    gap: 5px;
   }
 }

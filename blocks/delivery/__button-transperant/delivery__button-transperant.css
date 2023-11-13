@@ -1,11 +1,18 @@
 .delivery__button-transperant {
-        background: transparent;
-        border: none;
-        padding: 0 6px;
+  background: transparent;
+  border: none;
+  padding: 0 6px;
 }
 
 .delivery__button-transperant:hover {
-    opacity: 0.6;
-    transition: 0.35s;
-    cursor: pointer;
+  opacity: 0.6;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 687px) {
+  .delivery__button-transperant {
+    font-size: 16px;
+    align-self: flex-end;
   }
+}

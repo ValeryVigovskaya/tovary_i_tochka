@@ -1,3 +1,7 @@
 .text_color_pink {
     color: var(--system-magenta, #CB11AB);
+    border-bottom: 1px dashed #CB11AB;
+    cursor: pointer;
+    align-self: flex-start;
+    justify-self: flex-start;
 }
